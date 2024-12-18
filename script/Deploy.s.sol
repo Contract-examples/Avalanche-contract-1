@@ -34,7 +34,7 @@ contract DeployScript is Script {
 
     function run() public {
         // TODO: encrypt your private key
-        uint256 deployerPrivateKey = vm.envUint("SEPOLIA_WALLET_PRIVATE_KEY");
+        uint256 deployerPrivateKey = vm.envUint("WALLET_PRIVATE_KEY");
         address deployerAddress = vm.addr(deployerPrivateKey);
 
         vm.startBroadcast(deployerPrivateKey);
