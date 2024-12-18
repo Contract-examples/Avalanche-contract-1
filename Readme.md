@@ -1,7 +1,12 @@
 # Avalanche-contract-template
 
 
+## Deploy without verification
+```
+forge script script/Deploy.s.sol:DeployScript --rpc-url fuji-c --broadcast  -vvvv
+```
 
+## Verification
 With Foundry you can verify at deployment time or verify with a separate command, be sure to add `--verifier-url` to your deploy or verify script.
 
 To verify at deployment time:
