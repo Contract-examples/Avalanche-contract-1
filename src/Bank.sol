@@ -57,6 +57,9 @@ contract Bank is Ownable, ReentrancyGuardTransient, Pausable {
             // Transfer fixedly uses 2300 gas, which may not be enough in some cases
             // payable(admin).transfer(amount);
             Address.sendValue(payable(admin), amount);
+
+            // Update the msg.sender's balance
+            balances[msg.sender] -= amount;
         }
     }
 
