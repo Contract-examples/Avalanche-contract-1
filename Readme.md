@@ -1,7 +1,7 @@
 # Avalanche-contract-template
 
 
-## Deploy without verification
+## Deploy on testnet
 ```
 forge script script/Deploy.s.sol:DeployScript --rpc-url fuji-c --broadcast -vvvv --etherscan-api-key "verifyContract" --verify --verifier-url 'https://api.routescan.io/v2/network/testnet/evm/43113/etherscan'
 ```
