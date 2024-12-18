@@ -46,20 +46,15 @@ contract Bank is Ownable, ReentrancyGuardTransient, Pausable {
 
     // Withdrawal function (only callable by admin)
     function withdraw(uint256 amount) external whenNotPaused nonReentrant {
-        // Revert if caller is not admin
+        // Only admin can withdraw
         if (msg.sender != admin) {
             revert OnlyAdminCanWithdraw();
         }
-        // If the requested amount is greater than the balance, set amount to the balance
+        // Cap withdrawal amount to current balance
         uint256 balance = address(this).balance;
         amount = amount > balance ? balance : amount;
         if (amount != 0) {
-            // Transfer fixedly uses 2300 gas, which may not be enough in some cases
-            // payable(admin).transfer(amount);
             Address.sendValue(payable(admin), amount);
-
-            // Update the msg.sender's balance
-            balances[msg.sender] -= amount;
         }
     }
 
