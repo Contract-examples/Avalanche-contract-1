@@ -17,10 +17,7 @@ With Foundry you can verify at deployment time or verify with a separate command
 
 To verify at deployment time:
 ```
-forge script scripts/Deploy.s.sol
---broadcast --rpc-url fuji-c
---verifier-url 'https://api.routescan.io/v2/network/mainnet/evm/43114/etherscan'
---etherscan-api-key "verifyContract"
+forge script script/Deploy.s.sol:DeployScript --rpc-url fuji-c --broadcast -vvvv --verifier-url 'https://api.routescan.io/v2/network/mainnet/evm/43114/etherscan'
 ```
 
 To verify a contract if you already deployed :
