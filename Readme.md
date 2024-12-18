@@ -6,6 +6,12 @@
 forge script script/Deploy.s.sol:DeployScript --rpc-url fuji-c --broadcast  -vvvv
 ```
 
+## Txhash
+- https://testnet.snowtrace.io/tx/0x03a5247833f75ab3f0c22e7faa18b135f15a386fad391d7218a5127cf833662f
+
+## Contract address
+- ``0x6DF51Cf47180f082367b8156B539de9B574C28fd``
+
 ## Verification
 With Foundry you can verify at deployment time or verify with a separate command, be sure to add `--verifier-url` to your deploy or verify script.
 
