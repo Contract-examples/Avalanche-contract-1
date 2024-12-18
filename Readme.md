@@ -1,7 +1,6 @@
 # Avalanche-contract-template
 
 
-Foundry Verification (Separated Recipe)
 
 With Foundry you can verify at deployment time or verify with a separate command, be sure to add `--verifier-url` to your deploy or verify script.
 
