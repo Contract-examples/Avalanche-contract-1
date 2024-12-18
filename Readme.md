@@ -1,1 +1,1 @@
-# Avalanche-contract-1
+# Avalanche-contract-template
