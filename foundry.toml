@@ -35,7 +35,7 @@
 [etherscan]
   # arbitrum = { key = "${API_KEY_ARBISCAN}" }
   arbitrum_sepolia = { key = "${API_KEY_ARBISCAN}" }
-  # avalanche = { key = "${API_KEY_SNOWTRACE}" }
+  avalanche = { key = "${API_KEY_SNOWTRACE}" }
   # base = { key = "${API_KEY_BASESCAN}" }
   # bnb_smart_chain = { key = "${API_KEY_BSCSCAN}" }
   # gnosis_chain = { key = "${API_KEY_GNOSISSCAN}" }
