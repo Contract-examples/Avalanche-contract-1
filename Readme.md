@@ -12,3 +12,13 @@ forge script scripts/Deploy.s.sol
 --verifier-url 'https://api.routescan.io/v2/network/mainnet/evm/43114/etherscan'
 --etherscan-api-key "verifyContract"
 ```
+
+To verify a contract if you already deployed :
+```
+forge verify-contract [contract-address] [src/path/ContractPath.sol:ContractName]
+--verifier-url 'https://api.routescan.io/v2/network/mainnet/evm/43114/etherscan'
+--etherscan-api-key "verifyContract"
+--num-of-optimizations 200
+--compiler-version [solc compiler version]
+--constructor-args $(cast abi-encode "constructor(address param1, uint256 param2,...)" param1 param2 ...)
+```
